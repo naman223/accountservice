@@ -1,6 +1,6 @@
 After check out of the Code<br>
 1. export GOPATH=`pwd`<br>
-2. cd callingservice/src/github.com/callistaenterprise/goblog/accountservice<br>
+2. cd src/github.com/callistaenterprise/goblog/accountservice<br>
 3. go get github.com/boltdb/bolt<br>
 4. go get github.com/gorilla/mux<br>
 4. go run main.go<br>
