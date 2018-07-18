@@ -36,4 +36,16 @@ object Scenarios {
         )
         .pause(1)
     }
+
+    val scn_JsonCreate = scenario("JsonCreateAccount")
+            .during(Conf.duration) {
+            feed(browse_guids)
+            .exec(http("JsonCreateAccount")
+                .post("/accounts")
+                .body(StringBody("""{ "id": "${accountId}","name": "${accountName}" }""")).asJSON
+                .headers(Headers.http_header)
+                .check(status.is(200))
+            )
+            .pause(1)
+        }
 }

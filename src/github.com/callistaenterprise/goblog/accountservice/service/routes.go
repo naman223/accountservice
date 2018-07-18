@@ -28,4 +28,10 @@ var routes = Routes{
 		"/accounts/{accountId}/{accountName}", // Route pattern
 		CreateAccount,
 	},
+	Route{
+		"JsonCreateAccount",            // Name
+		"POST",                   // HTTP method
+		"/accounts", // Route pattern
+		JsonCreateAccount,
+	},
 }
